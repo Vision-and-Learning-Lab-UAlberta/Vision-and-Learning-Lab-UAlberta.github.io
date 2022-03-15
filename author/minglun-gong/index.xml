@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/minglun-gong/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/minglun-gong/index.xml" rel="self" type="application/rss+xml" />
     <description>Minglun Gong</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Tue, 04 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Tue, 01 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Minglun Gong</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/minglun-gong/</link>
     </image>
+    
+    <item>
+      <title>Action2video: Generating Videos of Human 3D Actions</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-a2v-ijcv-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-a2v-ijcv-22/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;Action2video: Generating Videos of Human 3D Actions&#34; is accepted by International Journal of Computer Vision(IJCV) 2022!</title>
