@@ -87,22 +87,6 @@
     </item>
     
     <item>
-      <title>Our paper &#34;DMRA: Depth-induced Multi-scale Recurrent Attention Network for RGB-D Saliency Detection&#34; is accepted by IEEE Transactions on Image Processing(TIP) 2022!</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_tip_2022/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_tip_2022/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Our paper &#34;Promoting Saliency From Depth: Deep Unsupervised RGB-D Saliency Detection&#34; is accepted by International Conference on Learning Representations (ICLR) 2022!</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_iclr_2022/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_iclr_2022/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Investigating Pose Representations and Motion Contexts Modeling for 3D Motion Prediction</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/shuang_investigating_2022/</link>
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
@@ -119,7 +103,7 @@
     </item>
     
     <item>
-      <title>Our paper &#34;Investigating Pose Representations and Motion Contexts Modeling for 3D Motion Prediction&#34; is accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence!</title>
+      <title>Our paper &#34;Investigating Pose Representations and Motion Contexts Modeling for 3D Motion Prediction&#34; is accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)!</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/post/shuang_tpami2022/</link>
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://vision-and-learning-lab-ualberta.github.io/post/shuang_tpami2022/</guid>
