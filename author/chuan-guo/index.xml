@@ -5,12 +5,36 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/index.xml" rel="self" type="application/rss+xml" />
     <description>Chuan Guo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Chuan Guo</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</link>
     </image>
+    
+    <item>
+      <title>Our paper &#34;TM2T: Stochastic and Tokenized Modeling for the Reciprocal Generation of 3D Human Motions and Texts.&#34; is accepted by European Conference on Computer Vision (ECCV) 2022!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/chuan_eccv_2022/</link>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/chuan_eccv_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TM2T: Stochastic and Tokenized Modeling for the Reciprocal Generation of 3D Human Motions and Texts.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-tm2t-eccv-2022/</link>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-tm2t-eccv-2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Human Pose and Shape Estimation from Single Polarization Images</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-et-al-tmm-2022/</link>
+      <pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-et-al-tmm-2022/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;Generating Diverse and Natural 3D Human Motions from Text&#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2022!</title>
