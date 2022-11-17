@@ -5,12 +5,28 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/post/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>News &amp; Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Thu, 17 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>News &amp; Posts</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Congratulates to Jingjing for being awarded the Alberta Graduate Excellence Scholarship!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jignjing_agescholarship_2022/</link>
+      <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jignjing_agescholarship_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congratulates to Wei on being awarded the Floyd Derkat Graduate Award in Artificial Intelligence and Machine Learning!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_fgdawards_2022/</link>
+      <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_fgdawards_2022/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;Object Wake-up: 3D Object Rigging from a Single Image&#34; is accepted by European Conference on Computer Vision (ECCV) 2022!</title>
