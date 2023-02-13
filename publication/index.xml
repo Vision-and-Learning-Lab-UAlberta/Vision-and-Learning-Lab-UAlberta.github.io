@@ -5,12 +5,43 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/publication/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>Delving into Calibrated Depth for Accurate RGB-D Salient Object Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-ijcv-23/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-ijcv-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snipper: A Spatiotemporal Transformer for Simultaneous Multi-Person 3D Pose Estimation Tracking and Forecasting on a Video Snippet</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-et-al-tcsvt-23/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-et-al-tcsvt-23/</guid>
+      <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/). --&gt;
+</description>
+    </item>
     
     <item>
       <title>Object Wake-up: 3D Object Rigging from a Single Image.</title>
@@ -41,6 +72,22 @@
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-a2v-ijcv-22/</link>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-a2v-ijcv-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DMRA: Depth-induced Multi-scale Recurrent Attention Network for RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-tip-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-tip-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promoting Saliency From Depth: Deep Unsupervised RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</guid>
       <description></description>
     </item>
     
@@ -118,17 +165,17 @@
     
     <item>
       <title>Calibrated RGB-D Salient Object Detection</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_dcf/</link>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_dcf/</guid>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning Calibrated Medical Image Segmentation via Multi-rater Agreement Modeling</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_mrnet/</link>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_mrnet/</guid>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</guid>
       <description></description>
     </item>
     
@@ -142,9 +189,9 @@
     
     <item>
       <title>3D Human Shape Reconstruction from a Polarization Image</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/publication/shihaozou_polarization_2020/</link>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-polarization-2020/</link>
       <pubDate>Thu, 02 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/shihaozou_polarization_2020/</guid>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-polarization-2020/</guid>
       <description>&lt;!-- &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

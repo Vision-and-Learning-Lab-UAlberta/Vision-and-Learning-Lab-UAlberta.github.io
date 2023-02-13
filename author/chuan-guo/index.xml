@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/index.xml" rel="self" type="application/rss+xml" />
     <description>Chuan Guo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Chuan Guo</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</link>
     </image>
+    
+    <item>
+      <title>Congratulates to Chuan for being awarded the Alberta Innovate Graduate Scholarship!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/chuan_aigsscholarship_2022/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/chuan_aigsscholarship_2022/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;TM2T: Stochastic and Tokenized Modeling for the Reciprocal Generation of 3D Human Motions and Texts.&#34; is accepted by European Conference on Computer Vision (ECCV) 2022!</title>
@@ -49,6 +57,14 @@
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-a2v-ijcv-22/</link>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-a2v-ijcv-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promoting Saliency From Depth: Deep Unsupervised RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</guid>
       <description></description>
     </item>
     

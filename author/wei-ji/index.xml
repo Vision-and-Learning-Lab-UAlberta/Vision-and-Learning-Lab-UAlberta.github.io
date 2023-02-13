@@ -5,12 +5,28 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/wei-ji/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/wei-ji/index.xml" rel="self" type="application/rss+xml" />
     <description>Wei Ji</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2022</copyright><lastBuildDate>Thu, 17 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Wei Ji</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/wei-ji/</link>
     </image>
+    
+    <item>
+      <title>Delving into Calibrated Depth for Accurate RGB-D Salient Object Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-ijcv-23/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-ijcv-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Delving into Calibrated Depth for Accurate RGB-D Salient Object Detection&#34; is accepted by Interactional Journal of Computer Vision (IJCV) 2023!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_ijcv2023/</link>
+      <pubDate>Fri, 09 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_ijcv2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Congratulates to Wei on being awarded the Floyd Derkat Graduate Award in Artificial Intelligence and Machine Learning!</title>
@@ -33,6 +49,22 @@
       <link>https://vision-and-learning-lab-ualberta.github.io/post/chuan_cvpr_2022/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://vision-and-learning-lab-ualberta.github.io/post/chuan_cvpr_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DMRA: Depth-induced Multi-scale Recurrent Attention Network for RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-tip-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-tip-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promoting Saliency From Depth: Deep Unsupervised RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</guid>
       <description></description>
     </item>
     
@@ -70,17 +102,17 @@
     
     <item>
       <title>Calibrated RGB-D Salient Object Detection</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_dcf/</link>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_dcf/</guid>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning Calibrated Medical Image Segmentation via Multi-rater Agreement Modeling</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_mrnet/</link>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei_cvpr21_mrnet/</guid>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</guid>
       <description></description>
     </item>
     
