@@ -44,6 +44,14 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     </item>
     
     <item>
+      <title>Resource-Efficient Medical Image Analysis</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-springer-22/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-springer-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Object Wake-up: 3D Object Rigging from a Single Image.</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/ji-et-al-objwu-eccv-2022/</link>
       <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
@@ -176,6 +184,14 @@ Supplementary notes can be added here, including [code and math](https://sourcet
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</link>
       <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stabilizing Training of Generative Adversarial Nets via Langevin Stein Variational Gradient Descent</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-tnnls-22/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-tnnls-22/</guid>
       <description></description>
     </item>
     
