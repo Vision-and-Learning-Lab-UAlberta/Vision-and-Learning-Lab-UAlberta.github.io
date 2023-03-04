@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/wei-ji/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/wei-ji/index.xml" rel="self" type="application/rss+xml" />
     <description>Wei Ji</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Wei Ji</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/wei-ji/</link>
     </image>
+    
+    <item>
+      <title>Our paper &#34;Multispectral Video Semantic Segmentation: A Benchmark Dataset and Baseline&#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition 2023</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2023/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Congratulates to Wei for being awarded the Alberta Innovate Graduate Scholarship!</title>
