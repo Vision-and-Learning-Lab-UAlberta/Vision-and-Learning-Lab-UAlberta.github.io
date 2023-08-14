@@ -5,12 +5,44 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/publication/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/publication/</link>
     </image>
+    
+    <item>
+      <title>SemanticRT: A Large-Scale Dataset and Method for Robust Semantic Segmentation in Multispectral Images</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-acm-23/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-acm-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Segment Anything Is Not Always Perfect: An Investigation of SAM on Different Real-world Applications</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvprws-23/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvprws-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BigNeuron: A resource to benchmark and predict best-performing algorithms for automated reconstruction of neuronal morphology</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-nature-23/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-nature-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multispectral Video Semantic Segmentation: A Benchmark Dataset and Baseline</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-23/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-23/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Delving into Calibrated Depth for Accurate RGB-D Salient Object Detection</title>
