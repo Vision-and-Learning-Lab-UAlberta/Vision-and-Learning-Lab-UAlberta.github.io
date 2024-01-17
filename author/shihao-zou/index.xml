@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/shihao-zou/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/shihao-zou/index.xml" rel="self" type="application/rss+xml" />
     <description>Shihao Zou</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2023</copyright><lastBuildDate>Mon, 13 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Tue, 16 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Shihao Zou</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/shihao-zou/</link>
     </image>
+    
+    <item>
+      <title>Our paper &#34;Generative Human Motion Stylization in Latent Space &#34; is accepted by International Conference on Learning Representations(ICLR) 2024!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/chuan_iclr_2024/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/chuan_iclr_2024/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Snipper: A Spatiotemporal Transformer for Simultaneous Multi-Person 3D Pose Estimation Tracking and Forecasting on a Video Snippet</title>
