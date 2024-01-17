@@ -17,10 +17,10 @@
     <loc>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/li-cheng/</loc>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/juwei-lu/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/minglun-gong/</loc>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/li-cheng/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/post/</loc>
@@ -29,19 +29,19 @@
     <loc>https://vision-and-learning-lab-ualberta.github.io/post/chuan_iclr_2024/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/sen-wang/</loc>
-    <lastmod>2024-01-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/shihao-zou/</loc>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/peng-dai/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/xinshuang-liu/</loc>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/xinxin-zuo/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/xinxin-zuo/</loc>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/youliang-yan/</loc>
+    <lastmod>2024-01-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/yuxuan-mu/</loc>
     <lastmod>2024-01-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_aigsscholarship_2023/</loc>
@@ -57,9 +57,6 @@
     <lastmod>2023-11-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_agesschsp_2023/</loc>
-    <lastmod>2023-11-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vision-and-learning-lab-ualberta.github.io/author/yuxuan-mu/</loc>
     <lastmod>2023-11-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/publication-type/1/</loc>
@@ -347,6 +344,9 @@
     <loc>https://vision-and-learning-lab-ualberta.github.io/author/minh-vo/</loc>
     <lastmod>2023-02-13T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/shihao-zou/</loc>
+    <lastmod>2023-02-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/publication/shihao-et-al-tcsvt-23/</loc>
     <lastmod>2023-02-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -386,7 +386,13 @@
     <loc>https://vision-and-learning-lab-ualberta.github.io/author/bingbig-ni/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/bingbing-ni/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/author/ji-yang/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/minglun-gong/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/tag/mm/</loc>
@@ -405,6 +411,9 @@
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/post/chuan_eccv_2022/</loc>
+    <lastmod>2022-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/sen-wang/</loc>
     <lastmod>2022-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-tm2t-eccv-2022/</loc>
@@ -465,6 +474,9 @@
     <lastmod>2022-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</loc>
+    <lastmod>2022-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vision-and-learning-lab-ualberta.github.io/author/xinshuang-liu/</loc>
     <lastmod>2022-03-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vision-and-learning-lab-ualberta.github.io/publication/shuang_investigating_2022/</loc>
