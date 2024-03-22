@@ -5,12 +5,28 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/index.xml" rel="self" type="application/rss+xml" />
     <description>Chuan Guo</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Fri, 19 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Tue, 27 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Chuan Guo</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/chuan-guo/</link>
     </image>
+    
+    <item>
+      <title>MoMask: Generative Masked Modeling of 3D Human Motions</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-cvpr-2024/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-cvpr-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;MoMask: Generative Masked Modeling of 3D Human Motions &#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2024!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/chuan_cvpr_2024/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/chuan_cvpr_2024/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Congratulates to Dr. Chuan Guo for successfully defending his PhD thesis! We wish him all the best in his future endeavors and are confident that his work will continue to inspire and lead to significant advancements.</title>
