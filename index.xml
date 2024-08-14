@@ -5,7 +5,7 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Vision and Learning Lab @ UAlberta</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Tue, 02 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Tue, 13 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Vision and Learning Lab @ UAlberta</title>
@@ -52,6 +52,46 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Congratulates to Yuxuan for successfully passing his MSc Exam! We wish him all the best in his future endeavors.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_defense_2024/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_defense_2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-eccv-24/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-eccv-24/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction&#34; is accepted by European Conference on Computer Vision (ECCV) 2024!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_eccv_2024/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_eccv_2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;RACon: Retrieval-Augmented Simulated Character Locomotion Control &#34; is accepted by IEEE International Conference on Multimedia &amp; Expo (ICME) 2024 for oral presentation!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_icme_2024/</link>
+      <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_icme_2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RACon: Retrieval-Augmented Simulated Character Locomotion Control</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-icme-24/</link>
+      <pubDate>Mon, 12 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-icme-24/</guid>
+      <description></description>
     </item>
     
     <item>

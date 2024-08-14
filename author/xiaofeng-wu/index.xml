@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xiaofeng Wu | Vision and Learning Lab @ UAlberta</title>
+    <link>https://vision-and-learning-lab-ualberta.github.io/author/xiaofeng-wu/</link>
+      <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/xiaofeng-wu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xiaofeng Wu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Tue, 13 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Xiaofeng Wu</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/author/xiaofeng-wu/</link>
+    </image>
+    
+    <item>
+      <title>GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-eccv-24/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-eccv-24/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction&#34; is accepted by European Conference on Computer Vision (ECCV) 2024!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_eccv_2024/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_eccv_2024/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
