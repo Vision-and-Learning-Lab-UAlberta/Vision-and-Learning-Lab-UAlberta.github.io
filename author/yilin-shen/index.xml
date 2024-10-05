@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yilin Shen | Vision and Learning Lab @ UAlberta</title>
+    <link>https://vision-and-learning-lab-ualberta.github.io/author/yilin-shen/</link>
+      <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/yilin-shen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yilin Shen</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2024</copyright><lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Yilin Shen</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/author/yilin-shen/</link>
+    </image>
+    
+    <item>
+      <title>Our paper &#34;Unleashing Multispectral Video&#39;s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark&#34; is accepted by NeurIPS 2024.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_neurips2024/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_neurips2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unleashing Multispectral Video&#39;s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-nips-24/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-nips-24/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
