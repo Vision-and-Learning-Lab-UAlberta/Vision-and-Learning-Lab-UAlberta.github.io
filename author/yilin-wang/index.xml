@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/yilin-wang/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/yilin-wang/index.xml" rel="self" type="application/rss+xml" />
     <description>Yilin Wang</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Yilin Wang</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/yilin-wang/</link>
     </image>
+    
+    <item>
+      <title>Two papers in our lab are accepted into ICLR 2025. They are 1st authored by Yilin and Gohar, respectively. Congratulations!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/2025_iclr/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/2025_iclr/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;RegionGrasp: A Novel Task for Contact Region Controllable Hand Grasp Generation&#34; is accepted by European Conference on Computer Vision (ECCV) Workshop HANDS@ECCV2024!</title>
