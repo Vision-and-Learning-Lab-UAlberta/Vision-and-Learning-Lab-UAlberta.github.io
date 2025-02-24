@@ -5,12 +5,36 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/li-cheng/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/li-cheng/index.xml" rel="self" type="application/rss+xml" />
     <description>Li Cheng</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Li Cheng</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/li-cheng/</link>
     </image>
+    
+    <item>
+      <title>MotionDreamer: One-to-Many Motion Synthesis with Localized Generative Masked Transformer</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/yilin-iclr-2025/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/yilin-iclr-2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hand Gesture Recognition from an Open-Set Perspective</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/2025_junzhou_tmm/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/2025_junzhou_tmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>InterMask: 3D Human Interaction Generation via Collaborative Masked Modelling</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/gohar-iclr-2025/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/gohar-iclr-2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;Unleashing Multispectral Video&#39;s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark&#34; is accepted by NeurIPS 2024.</title>
