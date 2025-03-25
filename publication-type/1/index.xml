@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/publication-type/1/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Fri, 28 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>1</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>HiPoser: 3D Human Pose Estimation with Hierarchical Shared Learning at Parts-Level Using Inertial Measurement Units</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/cheng-aaai-25/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/cheng-aaai-25/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>BootPlace: Bootstrapped Object Placement with Detection Transformers</title>
