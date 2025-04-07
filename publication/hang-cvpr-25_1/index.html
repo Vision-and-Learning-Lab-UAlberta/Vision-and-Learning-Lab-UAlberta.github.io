@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to minimize the need for dense supervision, which unfortunately may limit their ability to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been employed; yet their over-relaxed regularization often leads to imprecise placement. We propose BootPlace, a novel paradigm that formulates object placement as a placement-by-detection problem. Our method first identifies regions of interest suitable for object placement by training a dedicated detection transformer on object-subtracted backgrounds with multi-object supervisions. It then associates each target compositing object with detected regions based on semantic complementary. Using a boostrapped training approach on randomly object-subtracted images, our model regularizes meaningful placements through richly paired data augmentation. Experimental results on standard benchmarks demonstrate BootPlace&#39;s superior performance in object reposition, significantly outperforming state-fo-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations.">
+  <meta name="description" content="In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to reduce the reliance for dense supervision. However, this often limits their capacity to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been explored, but their over-relaxed regularization often leads to imprecise object placement. We introduce BOOTPLACE, a novel paradigm that formulates object placement as a placement-by-detection problem. Our approach begins by identifying suitable regions of interest for object placement. This is achieved by training a specialized detection transformer on object-subtracted backgrounds, enhanced with multi-object supervisions. It then semantically associates each target compositing object with detected regions based on their complementary characteristics. Through a boostrapped training approach applied to randomly object-subtracted images, our model enforces meaningful placements through extensive paired data augmentation. Experimental results on established benchmarks demonstrate BOOTPLACE’s superior performance in object repositioning, markedly surpassing stateof-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations. ">
 
   
   <link rel="alternate" hreflang="en-us" href="https://vision-and-learning-lab-ualberta.github.io/publication/hang-cvpr-25_1/">
@@ -234,8 +234,8 @@
   
   <meta property="og:site_name" content="Vision and Learning Lab @ UAlberta">
   <meta property="og:url" content="https://vision-and-learning-lab-ualberta.github.io/publication/hang-cvpr-25_1/">
-  <meta property="og:title" content="BootPlace: Bootstrapped Object Placement with Detection Transformers | Vision and Learning Lab @ UAlberta">
-  <meta property="og:description" content="In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to minimize the need for dense supervision, which unfortunately may limit their ability to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been employed; yet their over-relaxed regularization often leads to imprecise placement. We propose BootPlace, a novel paradigm that formulates object placement as a placement-by-detection problem. Our method first identifies regions of interest suitable for object placement by training a dedicated detection transformer on object-subtracted backgrounds with multi-object supervisions. It then associates each target compositing object with detected regions based on semantic complementary. Using a boostrapped training approach on randomly object-subtracted images, our model regularizes meaningful placements through richly paired data augmentation. Experimental results on standard benchmarks demonstrate BootPlace&#39;s superior performance in object reposition, significantly outperforming state-fo-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations."><meta property="og:image" content="https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+  <meta property="og:title" content="BOOTPLACE: Bootstrapped Object Placement with Detection Transformers | Vision and Learning Lab @ UAlberta">
+  <meta property="og:description" content="In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to reduce the reliance for dense supervision. However, this often limits their capacity to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been explored, but their over-relaxed regularization often leads to imprecise object placement. We introduce BOOTPLACE, a novel paradigm that formulates object placement as a placement-by-detection problem. Our approach begins by identifying suitable regions of interest for object placement. This is achieved by training a specialized detection transformer on object-subtracted backgrounds, enhanced with multi-object supervisions. It then semantically associates each target compositing object with detected regions based on their complementary characteristics. Through a boostrapped training approach applied to randomly object-subtracted images, our model enforces meaningful placements through extensive paired data augmentation. Experimental results on established benchmarks demonstrate BOOTPLACE’s superior performance in object repositioning, markedly surpassing stateof-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations. "><meta property="og:image" content="https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
     
@@ -265,7 +265,7 @@
     "@type": "WebPage",
     "@id": "https://vision-and-learning-lab-ualberta.github.io/publication/hang-cvpr-25_1/"
   },
-  "headline": "BootPlace: Bootstrapped Object Placement with Detection Transformers",
+  "headline": "BOOTPLACE: Bootstrapped Object Placement with Detection Transformers",
   
   "datePublished": "2025-02-28T00:00:00Z",
   "dateModified": "2025-02-28T00:00:00Z",
@@ -283,7 +283,7 @@
       "url": "https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to minimize the need for dense supervision, which unfortunately may limit their ability to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been employed; yet their over-relaxed regularization often leads to imprecise placement. We propose BootPlace, a novel paradigm that formulates object placement as a placement-by-detection problem. Our method first identifies regions of interest suitable for object placement by training a dedicated detection transformer on object-subtracted backgrounds with multi-object supervisions. It then associates each target compositing object with detected regions based on semantic complementary. Using a boostrapped training approach on randomly object-subtracted images, our model regularizes meaningful placements through richly paired data augmentation. Experimental results on standard benchmarks demonstrate BootPlace's superior performance in object reposition, significantly outperforming state-fo-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations."
+  "description": "In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to reduce the reliance for dense supervision. However, this often limits their capacity to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been explored, but their over-relaxed regularization often leads to imprecise object placement. We introduce BOOTPLACE, a novel paradigm that formulates object placement as a placement-by-detection problem. Our approach begins by identifying suitable regions of interest for object placement. This is achieved by training a specialized detection transformer on object-subtracted backgrounds, enhanced with multi-object supervisions. It then semantically associates each target compositing object with detected regions based on their complementary characteristics. Through a boostrapped training approach applied to randomly object-subtracted images, our model enforces meaningful placements through extensive paired data augmentation. Experimental results on established benchmarks demonstrate BOOTPLACE’s superior performance in object repositioning, markedly surpassing stateof-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations. "
 }
 </script>
 
@@ -301,7 +301,7 @@
 
 
 
-  <title>BootPlace: Bootstrapped Object Placement with Detection Transformers | Vision and Learning Lab @ UAlberta</title>
+  <title>BOOTPLACE: Bootstrapped Object Placement with Detection Transformers | Vision and Learning Lab @ UAlberta</title>
 
 </head>
 
@@ -537,7 +537,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>BootPlace: Bootstrapped Object Placement with Detection Transformers</h1>
+  <h1>BOOTPLACE: Bootstrapped Object Placement with Detection Transformers</h1>
 
   
 
@@ -597,6 +597,57 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/abs/2503.21991" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/RyanHangZhou/BOOTPLACE" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://ryanhangzhou.github.io/bootplace/" target="_blank" rel="noopener">
+  Project
+</a>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 
   
 </div>
@@ -607,7 +658,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract">In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to minimize the need for dense supervision, which unfortunately may limit their ability to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been employed; yet their over-relaxed regularization often leads to imprecise placement. We propose BootPlace, a novel paradigm that formulates object placement as a placement-by-detection problem. Our method first identifies regions of interest suitable for object placement by training a dedicated detection transformer on object-subtracted backgrounds with multi-object supervisions. It then associates each target compositing object with detected regions based on semantic complementary. Using a boostrapped training approach on randomly object-subtracted images, our model regularizes meaningful placements through richly paired data augmentation. Experimental results on standard benchmarks demonstrate BootPlace&rsquo;s superior performance in object reposition, significantly outperforming state-fo-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations.</p>
+    <p class="pub-abstract">In this paper, we tackle the copy-paste image-to-image composition problem with a focus on object placement learning. Prior methods have leveraged generative models to reduce the reliance for dense supervision. However, this often limits their capacity to model complex data distributions. Alternatively, transformer networks with a sparse contrastive loss have been explored, but their over-relaxed regularization often leads to imprecise object placement. We introduce BOOTPLACE, a novel paradigm that formulates object placement as a placement-by-detection problem. Our approach begins by identifying suitable regions of interest for object placement. This is achieved by training a specialized detection transformer on object-subtracted backgrounds, enhanced with multi-object supervisions. It then semantically associates each target compositing object with detected regions based on their complementary characteristics. Through a boostrapped training approach applied to randomly object-subtracted images, our model enforces meaningful placements through extensive paired data augmentation. Experimental results on established benchmarks demonstrate BOOTPLACE’s superior performance in object repositioning, markedly surpassing stateof-the-art baselines on Cityscapes and OPA datasets with notable improvements in IOU scores. Additional ablation studies further showcase the compositionality and generalizability of our approach, supported by user study evaluations.</p>
     
 
     
