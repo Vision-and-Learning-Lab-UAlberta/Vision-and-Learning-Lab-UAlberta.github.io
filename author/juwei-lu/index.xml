@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Juwei Lu | Vision and Learning Lab @ UAlberta</title>
+    <link>https://vision-and-learning-lab-ualberta.github.io/author/juwei-lu/</link>
+      <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/juwei-lu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Juwei Lu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Mon, 24 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Juwei Lu</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/author/juwei-lu/</link>
+    </image>
+    
+    <item>
+      <title>MotionDreamer: One-to-Many Motion Synthesis with Localized Generative Masked Transformer</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/yilin-iclr-2025/</link>
+      <pubDate>Mon, 24 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/yilin-iclr-2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-eccv-24/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/yuxuan-et-al-eccv-24/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;GSD: View-Guided Gaussian Splatting Diffusion for 3D Reconstruction&#34; is accepted by European Conference on Computer Vision (ECCV) 2024!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_eccv_2024/</link>
+      <pubDate>Tue, 13 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/yuxuan_eccv_2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generative Human Motion Stylization in Latent Space</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-iclr-2024/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/chuan-iclr-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Generative Human Motion Stylization in Latent Space &#34; is accepted by International Conference on Learning Representations (ICLR) 2024!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/chuan_iclr_2024/</link>
+      <pubDate>Tue, 16 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/chuan_iclr_2024/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

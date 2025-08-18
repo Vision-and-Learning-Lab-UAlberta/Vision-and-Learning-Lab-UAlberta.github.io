@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jingjing Li | Vision and Learning Lab @ UAlberta</title>
+    <link>https://vision-and-learning-lab-ualberta.github.io/author/jingjing-li/</link>
+      <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/jingjing-li/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jingjing Li</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Jingjing Li</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/author/jingjing-li/</link>
+    </image>
+    
+    <item>
+      <title>Our paper &#34;Unleashing Multispectral Video&#39;s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark&#34; is accepted by NeurIPS 2024.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_neurips2024/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_neurips2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unleashing Multispectral Video&#39;s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-nips-24/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-nips-24/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jingjing has been awarded the Andrew Stewart Memorial Graduate Prize. Congratulations!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_andrew_2024/</link>
+      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_andrew_2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congratulates to Jingjing for being awarded the Alberta Innovate Graduate Scholarship!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_aigsscholarship_2023/</link>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_aigsscholarship_2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DVSOD: RGB-D Video Salient Object Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-nips-23/</link>
+      <pubDate>Thu, 21 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-nips-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congratulates to Jingjing for being awarded the Floyd Derkat Graduate Award in Artificial Intelligence and Machine Learning!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_fgdawards_2023/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_fgdawards_2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SemanticRT: A Large-Scale Dataset and Method for Robust Semantic Segmentation in Multispectral Images</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-acm-23/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-acm-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our CVPR 2023 workshop paper &#34;Segment Anything Is Not Always Perfect: An Investigation of SAM on Different Real-world Applications&#34; has won the most insightful paper award presented by the 1st Workshop on Vision-based InduStrial InspectiON!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvprws_2023/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvprws_2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Segment Anything Is Not Always Perfect: An Investigation of SAM on Different Real-world Applications</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvprws-23/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvprws-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multispectral Video Semantic Segmentation: A Benchmark Dataset and Baseline</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-23/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Multispectral Video Semantic Segmentation: A Benchmark Dataset and Baseline&#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition 2023!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2023/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Delving into Calibrated Depth for Accurate RGB-D Salient Object Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-ijcv-23/</link>
+      <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing-et-al-ijcv-23/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Delving into Calibrated Depth for Accurate RGB-D Salient Object Detection&#34; is accepted by Interactional Journal of Computer Vision (IJCV) 2023!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_ijcv2023/</link>
+      <pubDate>Fri, 09 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_ijcv2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congratulates to Jingjing for being awarded the Alberta Graduate Excellence Scholarship!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jignjing_agescholarship_2022/</link>
+      <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jignjing_agescholarship_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Exploring Denoised Cross-video Contrast for Weakly-supervised Temporal Action Localization&#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition(CVPR) 2022!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_cvpr_2022/</link>
+      <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_cvpr_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DMRA: Depth-induced Multi-scale Recurrent Attention Network for RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-tip-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-tip-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Promoting Saliency From Depth: Deep Unsupervised RGB-D Saliency Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-iclr-22/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joint Semantic Mining for Weakly Supervised RGB-D Salient Object Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing_joint_2021/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/jingjing_joint_2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Joint Semantic Mining for Weakly Supervised RGB-D Salient Object Detection&#34; is accepted by NeurIPS 2021</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_neurips2021/</link>
+      <pubDate>Mon, 06 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_neurips2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Calibrated RGB-D Salient Object Detection&#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition 2021</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2021a/</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2021a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Our paper &#34;Learning Calibrated Medical Image Segmentation via Multi-rater Agreement Modeling&#34; is accepted by IEEE Conference on Computer Vision and Pattern Recognition 2021 (Best Paper Candidate)</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2021b/</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/wei_cvpr_2021b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Calibrated RGB-D Salient Object Detection</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning Calibrated Medical Image Segmentation via Multi-rater Agreement Modeling</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/wei-et-al-cvpr-21-mrnet/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

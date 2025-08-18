@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jun Zhou | Vision and Learning Lab @ UAlberta</title>
+    <link>https://vision-and-learning-lab-ualberta.github.io/author/jun-zhou/</link>
+      <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/jun-zhou/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jun Zhou</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Mon, 27 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Jun Zhou</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/author/jun-zhou/</link>
+    </image>
+    
+    <item>
+      <title>Hand Gesture Recognition from an Open-Set Perspective</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/2025_junzhou_tmm/</link>
+      <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/2025_junzhou_tmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congrats to Jun for his paper, Hand Gesture Recognition from an Open-Set Perspective, being accepted recently by IEEE TMM!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jun_tmm_2025/</link>
+      <pubDate>Fri, 24 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jun_tmm_2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Welcome Jun Zhou, who recently joined in our lab as a visiting PhD student.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/junzhou_visitingstudent_2024/</link>
+      <pubDate>Fri, 04 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/junzhou_visitingstudent_2024/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

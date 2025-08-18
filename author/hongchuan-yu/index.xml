@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hongchuan Yu | Vision and Learning Lab @ UAlberta</title>
+    <link>https://vision-and-learning-lab-ualberta.github.io/author/hongchuan-yu/</link>
+      <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/hongchuan-yu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Hongchuan Yu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Thu, 11 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Hongchuan Yu</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/author/hongchuan-yu/</link>
+    </image>
+    
+    <item>
+      <title>BigNeuron: A resource to benchmark and predict best-performing algorithms for automated reconstruction of neuronal morphology</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-nature-23/</link>
+      <pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/li-et-al-nature-23/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
