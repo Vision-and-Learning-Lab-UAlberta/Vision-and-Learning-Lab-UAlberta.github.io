@@ -5,12 +5,20 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/post/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>News &amp; Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Mon, 01 Sep 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>News &amp; Posts</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Welcome Jiahui, who recently joined in our lab as a MSc student.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jiahui_newstudent_2025/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jiahui_newstudent_2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Welcome Dr. Pengyu Zhang, who recently joined in our lab as a Postdoc Fellow.</title>
