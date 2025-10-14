@@ -5,12 +5,28 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/author/jingjing-li/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/author/jingjing-li/index.xml" rel="self" type="application/rss+xml" />
     <description>Jingjing Li</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Fri, 26 Sep 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Jingjing Li</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/author/jingjing-li/</link>
     </image>
+    
+    <item>
+      <title>Congratulates to Dr. Jingjing Li for successfully defending her PhD thesis!</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_defense_2025/</link>
+      <pubDate>Fri, 26 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_defense_2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congratulates to Jingjing for being awarded the Stephen and Olga Anhill Graduate Scholarship in Electrical and Computer Engineering.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_scholarship_2025/</link>
+      <pubDate>Wed, 24 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jingjing_scholarship_2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Our paper &#34;Unleashing Multispectral Video&#39;s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark&#34; is accepted by NeurIPS 2024.</title>
