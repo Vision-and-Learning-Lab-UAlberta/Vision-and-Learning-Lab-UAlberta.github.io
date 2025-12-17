@@ -5,7 +5,7 @@
     <link>https://vision-and-learning-lab-ualberta.github.io/</link>
       <atom:link href="https://vision-and-learning-lab-ualberta.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Vision and Learning Lab @ UAlberta</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Thu, 27 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Vision and Learning Lab, Univerity of Alberta 2025</copyright><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://vision-and-learning-lab-ualberta.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Vision and Learning Lab @ UAlberta</title>
@@ -55,10 +55,34 @@
     </item>
     
     <item>
+      <title>Welcome Dr. Bohan Wei, who recently joined in our lab as a Postdoc Fellow.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/bohanwei_newpostdoc_2025/</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/bohanwei_newpostdoc_2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Congrats to Jiahui Peng for receiving the Alberta Graduate Excellence Scholarship!</title>
       <link>https://vision-and-learning-lab-ualberta.github.io/post/jiahui_agescholarship_2025/</link>
       <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://vision-and-learning-lab-ualberta.github.io/post/jiahui_agescholarship_2025/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Congrats to Jun Zhou for his paper accepted by AAAI 2026. His paper, titled VPHO: Joint Visual-Physical Cue Learning and Aggregation for Hand-Object Pose Estimation, is among the first attempts to visually estimate pressure measure during hand object interactions.</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/post/jun_aaai_2026/</link>
+      <pubDate>Thu, 27 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/post/jun_aaai_2026/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VPHO: Joint Visual-Physical Cue Learning and Aggregation for Hand-Object Pose Estimation</title>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/junzhou_aaai_2026/</link>
+      <pubDate>Sat, 22 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/junzhou_aaai_2026/</guid>
       <description></description>
     </item>
     
@@ -175,9 +199,9 @@ Supplementary notes can be added here, including [code and math](https://sourcet
     
     <item>
       <title>Hand Gesture Recognition from an Open-Set Perspective</title>
-      <link>https://vision-and-learning-lab-ualberta.github.io/publication/2025_junzhou_tmm/</link>
+      <link>https://vision-and-learning-lab-ualberta.github.io/publication/junzhou_tmm_2025/</link>
       <pubDate>Mon, 27 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/2025_junzhou_tmm/</guid>
+      <guid>https://vision-and-learning-lab-ualberta.github.io/publication/junzhou_tmm_2025/</guid>
       <description></description>
     </item>
     
