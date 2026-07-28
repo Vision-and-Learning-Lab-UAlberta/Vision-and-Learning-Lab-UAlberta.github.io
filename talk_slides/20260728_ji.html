@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="description" content="Detailed Shape of Motion paper presentation with method, optimization, results, ablation, and notes" />
+  <title>Shape of Motion — Detailed HTML Presentation</title>
+  <style>
+    :root{
+      --bg:#f4f4f1;
+      --surface:#ffffff;
+      --surface-2:#e9eae7;
+      --ink:#171817;
+      --muted:#5f6461;
+      --line:#d3d5d1;
+      --accent:#536b78;
+      --accent-soft:#dce4e8;
+      --good:#476557;
+      --warn:#8a5f43;
+      --shadow:0 22px 70px rgba(20,24,22,.10);
+      --radius:26px;
+      --pad:clamp(26px,5vw,80px);
+      --content:1320px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-snap-type:y mandatory;background:var(--bg)}
+    body{
+      margin:0;background:var(--bg);color:var(--ink);
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    }
+    a{color:inherit}
+    button,input{font:inherit}
+    .progress{
+      position:fixed;left:0;top:0;height:4px;width:0;background:var(--accent);
+      z-index:1000;transition:width .18s ease;
+    }
+    .deck-nav{
+      position:fixed;right:22px;top:50%;transform:translateY(-50%);
+      display:flex;flex-direction:column;gap:9px;z-index:90;
+    }
+    .deck-nav button{
+      width:9px;height:9px;border:0;border-radius:50%;padding:0;
+      background:#b8bbb7;cursor:pointer;transition:.2s ease;
+    }
+    .deck-nav button.active{background:var(--accent);transform:scale(1.45)}
+    .key-help{
+      position:fixed;left:18px;bottom:14px;z-index:80;
+      color:#777d79;font-size:12px;letter-spacing:.02em;
+      background:rgba(244,244,241,.84);backdrop-filter:blur(8px);
+      border:1px solid rgba(120,124,121,.18);border-radius:999px;padding:8px 12px;
+    }
+    .slide{
+      min-height:100vh;scroll-snap-align:start;scroll-snap-stop:always;
+      display:flex;align-items:center;position:relative;padding:var(--pad);
+      overflow:hidden;
+    }
+    .inner{width:min(100%,var(--content));margin:auto}
+    .eyebrow{
+      display:flex;align-items:center;gap:12px;
+      font-size:12px;font-weight:720;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);
+      margin-bottom:20px;
+    }
+    .eyebrow:before{content:"";width:35px;height:2px;background:var(--accent)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(52px,7vw,112px);line-height:.94;letter-spacing:-.055em;margin-bottom:28px}
+    h2{font-size:clamp(38px,5vw,78px);line-height:1.02;letter-spacing:-.045em;margin-bottom:24px}
+    h3{font-size:clamp(19px,2vw,30px);line-height:1.15;letter-spacing:-.02em}
+    .lead{font-size:clamp(19px,2vw,31px);line-height:1.45;color:var(--muted);max-width:930px}
+    .small{font-size:14px;color:var(--muted);line-height:1.55}
+    .meta{display:flex;gap:16px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:14px}
+    .pill{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.6)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);align-items:center}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:var(--radius);
+      padding:clamp(20px,2.4vw,36px);box-shadow:0 12px 40px rgba(25,30,27,.055);
+    }
+    .card.flat{box-shadow:none}
+    .card-number{font-size:12px;font-weight:760;letter-spacing:.12em;color:var(--accent);margin-bottom:18px}
+    .card p:last-child{margin-bottom:0}
+    .accent{color:var(--accent)}
+    .muted{color:var(--muted)}
+    .statement{
+      border-left:4px solid var(--accent);padding:16px 0 16px 24px;
+      font-size:clamp(24px,3vw,44px);line-height:1.2;letter-spacing:-.025em;
+    }
+    .media-shell{
+      position:relative;border-radius:22px;overflow:hidden;background:#d9dcda;
+      border:1px solid rgba(20,25,22,.13);box-shadow:var(--shadow);min-height:240px;
+    }
+    .media-shell video{display:block;width:100%;height:100%;object-fit:cover;background:#d9dcda}
+    .media-label{
+      position:absolute;left:14px;bottom:13px;padding:7px 11px;border-radius:999px;
+      background:rgba(12,15,13,.72);color:#fff;font-size:12px;backdrop-filter:blur(6px);
+    }
+    .media-fallback{
+      display:none;position:absolute;inset:0;place-items:center;padding:22px;text-align:center;
+      color:var(--muted);background:linear-gradient(135deg,#e9ebe8,#d8dedf);
+    }
+    video.failed + .media-fallback{display:grid}
+    .hero-media{
+      position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;
+      opacity:.54;filter:saturate(.55) contrast(.9);
+    }
+    .hero-media video{width:100%;height:100%;object-fit:cover}
+    .hero-overlay{
+      position:absolute;inset:0;background:
+        linear-gradient(90deg,rgba(244,244,241,.96) 0%,rgba(244,244,241,.84) 41%,rgba(244,244,241,.2) 76%),
+        linear-gradient(0deg,rgba(244,244,241,.95),rgba(244,244,241,.1) 60%);
+    }
+    .title-content{position:relative;z-index:3;max-width:1020px}
+    .authors{font-size:16px;color:var(--muted);line-height:1.65;max-width:900px}
+    .venue{display:inline-flex;margin-top:18px;padding:9px 15px;background:var(--ink);color:#fff;border-radius:999px;font-size:13px;font-weight:700}
+    .problem-flow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:38px}
+    .problem-flow .node{
+      flex:1;min-height:140px;border-radius:22px;background:var(--surface);border:1px solid var(--line);
+      display:grid;place-items:center;text-align:center;padding:18px;font-weight:680;font-size:18px;
+    }
+    .arrow{font-size:34px;color:var(--accent);font-weight:300}
+    .trajectory-stage{
+      height:min(54vh,520px);background:radial-gradient(circle at 50% 50%,#fff,#e7e9e5);
+      border:1px solid var(--line);border-radius:var(--radius);position:relative;overflow:hidden;
+    }
+    .trajectory-stage canvas{width:100%;height:100%;display:block}
+    .trajectory-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .dot-key{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted)}
+    .dot-key i{width:10px;height:10px;border-radius:50%;display:inline-block}
+    .formula{
+      background:#121412;color:#f8f8f5;border-radius:22px;padding:24px 28px;
+      font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+      font-size:clamp(18px,2.2vw,32px);line-height:1.55;overflow:auto;
+    }
+    .term-list{display:grid;gap:12px;margin-top:20px}
+    .term{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+    .term b{font-family:"SFMono-Regular",Consolas,monospace;color:var(--accent)}
+    .control-panel{display:grid;gap:16px}
+    .range-row{display:grid;grid-template-columns:88px 1fr 42px;align-items:center;gap:12px}
+    input[type=range]{width:100%;accent-color:var(--accent)}
+    .prior-orbit{
+      min-height:440px;position:relative;border-radius:var(--radius);background:#eff0ed;border:1px solid var(--line);overflow:hidden;
+    }
+    .prior-center{
+      position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:190px;height:190px;border-radius:50%;background:var(--ink);color:#fff;
+      display:grid;place-items:center;text-align:center;padding:20px;font-weight:700;font-size:20px;
+      box-shadow:0 25px 60px rgba(20,22,21,.25);
+    }
+    .prior-node{
+      position:absolute;width:175px;min-height:90px;padding:15px;border-radius:20px;background:#fff;border:1px solid var(--line);
+      display:grid;place-items:center;text-align:center;font-weight:650;
+    }
+    .prior-node small{display:block;color:var(--muted);font-weight:450;margin-top:5px}
+    .prior-node:nth-child(2){left:6%;top:10%}
+    .prior-node:nth-child(3){right:6%;top:10%}
+    .prior-node:nth-child(4){left:6%;bottom:10%}
+    .prior-node:nth-child(5){right:6%;bottom:10%}
+    .prior-orbit svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+    .pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}
+    .pipe{
+      min-height:180px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px 18px;
+      display:flex;flex-direction:column;justify-content:space-between;position:relative;
+    }
+    .pipe:not(:last-child):after{
+      content:"→";position:absolute;right:-20px;top:50%;transform:translateY(-50%);z-index:2;
+      color:var(--accent);font-size:27px;
+    }
+    .pipe-num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.12em}
+    .pipe strong{font-size:18px}
+    .pipe span{font-size:13px;color:var(--muted);line-height:1.4}
+    .loss-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+    .loss{padding:9px 13px;background:var(--accent-soft);border-radius:999px;font-size:13px;font-weight:650;color:#344a54}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .tab{
+      border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;cursor:pointer;
+      color:var(--muted);font-weight:650;
+    }
+    .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .result-set{display:none}
+    .result-set.active{display:grid}
+    .comparison-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .takeaway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .takeaway{padding-top:18px;border-top:3px solid var(--accent)}
+    .takeaway b{font-size:22px;display:block;margin-bottom:10px}
+    .footnote{
+      position:absolute;left:var(--pad);right:var(--pad);bottom:18px;
+      color:#7a7f7c;font-size:11px;display:flex;justify-content:space-between;gap:18px;
+    }
+    .notes{
+      display:none;position:fixed;left:4vw;right:4vw;bottom:4vh;z-index:800;
+      padding:18px 22px;border-radius:18px;background:rgba(17,19,18,.94);color:#f4f4f1;
+      box-shadow:0 20px 80px rgba(0,0,0,.35);max-height:32vh;overflow:auto;font-size:15px;line-height:1.6;
+    }
+    body.show-notes .slide.is-current .notes{display:block}
+    body.overview{overflow:auto}
+    body.overview .slide{
+      min-height:auto;height:360px;width:calc(50% - 34px);display:inline-flex;vertical-align:top;
+      transform:scale(.92);transform-origin:center;scroll-snap-align:none;margin:16px;cursor:pointer;
+      border:1px solid var(--line);border-radius:22px;background:var(--bg);box-shadow:var(--shadow);
+    }
+    body.overview .slide *{pointer-events:none}
+    body.overview .deck-nav,body.overview .key-help{display:none}
+    .offline-badge{
+      position:absolute;right:var(--pad);top:var(--pad);font-size:12px;color:var(--muted);
+      border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.65)
+    }
+    @media(max-width:900px){
+      html{scroll-snap-type:none}
+      .grid-2,.grid-3,.comparison-grid,.takeaway-grid{grid-template-columns:1fr}
+      .slide{min-height:auto;padding-top:80px;padding-bottom:80px}
+      .pipeline{grid-template-columns:1fr}
+      .pipe:not(:last-child):after{content:"↓";right:50%;top:auto;bottom:-29px;transform:translateX(50%)}
+      .hero-media{grid-template-columns:1fr}
+      .hero-media video:nth-child(2){display:none}
+      .deck-nav{display:none}
+      .problem-flow{flex-direction:column}
+      .arrow{transform:rotate(90deg)}
+      .prior-node{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:auto;margin:10px}
+      .prior-center{position:relative;left:auto;top:auto;transform:none;margin:24px auto}
+      .prior-orbit svg{display:none}
+      .term{grid-template-columns:1fr}
+      .footnote{position:static;margin-top:30px}
+      .offline-badge{display:none}
+    }
+  
+    .body-copy{
+      font-size:clamp(15px,1.35vw,20px);
+      line-height:1.68;color:#373b39;max-width:980px;
+    }
+    .body-copy p{margin-bottom:14px}
+    .bullet-list{
+      margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px;
+    }
+    .bullet-list li{
+      position:relative;padding-left:22px;color:#343936;
+      font-size:clamp(15px,1.25vw,19px);line-height:1.55;
+    }
+    .bullet-list li:before{
+      content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;
+      border-radius:50%;background:var(--accent);
+    }
+    .definition-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+    .definition{
+      background:rgba(255,255,255,.82);border:1px solid var(--line);
+      border-radius:20px;padding:20px 22px;
+    }
+    .definition b{display:block;font-size:17px;margin-bottom:7px}
+    .definition span{color:var(--muted);font-size:14px;line-height:1.5}
+    .section-summary{
+      margin-top:24px;padding:18px 22px;border-radius:18px;
+      background:var(--accent-soft);color:#334a55;
+      font-size:clamp(16px,1.4vw,21px);line-height:1.55;font-weight:610;
+    }
+    .metric-table{
+      width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);
+      border-radius:18px;overflow:hidden;font-size:13px;
+    }
+    .metric-table th,.metric-table td{
+      padding:11px 12px;border-bottom:1px solid #e4e5e2;text-align:right;white-space:nowrap;
+    }
+    .metric-table th:first-child,.metric-table td:first-child{text-align:left}
+    .metric-table thead th{background:#e9eceb;color:#3f4744;font-size:12px}
+    .metric-table tr.highlight-row td{background:#e4eaed;font-weight:750;color:#263941}
+    .metric-table tr:last-child td{border-bottom:0}
+    .metric-note{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}
+    .number-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+    .number-card{
+      background:#fff;border:1px solid var(--line);border-radius:19px;padding:18px;
+    }
+    .number-card strong{display:block;font-size:clamp(25px,3vw,42px);letter-spacing:-.04em;color:var(--accent)}
+    .number-card span{font-size:13px;color:var(--muted);line-height:1.4}
+    .compare-list{display:grid;gap:10px;margin-top:18px}
+    .compare-item{
+      display:grid;grid-template-columns:170px 1fr;gap:15px;
+      padding:13px 0;border-bottom:1px solid var(--line);
+    }
+    .compare-item b{font-size:15px}
+    .compare-item span{font-size:14px;color:var(--muted);line-height:1.5}
+    .equation-card{
+      border-radius:20px;background:#151816;color:#f2f3f0;padding:20px 23px;
+      font-family:"SFMono-Regular",Consolas,monospace;font-size:clamp(15px,1.5vw,22px);
+      line-height:1.65;
+    }
+    .loss-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .loss-card{
+      border-radius:19px;background:#fff;border:1px solid var(--line);padding:18px 20px;
+    }
+    .loss-card code{display:block;color:var(--accent);font-weight:750;margin-bottom:8px}
+    .loss-card p{font-size:14px;color:var(--muted);line-height:1.5;margin-bottom:0}
+    .timeline{display:grid;gap:0;margin-top:16px}
+    .timeline-row{
+      display:grid;grid-template-columns:105px 1fr;gap:18px;padding:15px 0;
+      border-bottom:1px solid var(--line);
+    }
+    .timeline-row:last-child{border-bottom:0}
+    .timeline-row .stage{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--accent)}
+    .timeline-row .desc{font-size:15px;line-height:1.55;color:#343936}
+    .critical-box{
+      background:#fff;border:1px solid var(--line);border-left:5px solid var(--warn);
+      border-radius:18px;padding:19px 22px;
+    }
+    .critical-box b{display:block;margin-bottom:8px}
+    .source-line{
+      margin-top:16px;font-size:11px;color:#7a7f7c;line-height:1.45;
+    }
+    @media(max-width:900px){
+      .definition-grid,.loss-grid,.number-strip{grid-template-columns:1fr}
+      .compare-item,.timeline-row{grid-template-columns:1fr;gap:5px}
+      .metric-table{display:block;overflow-x:auto}
+    }
+
+  </style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="deck-nav" id="deckNav" aria-label="Section navigation"></nav>
+<div class="key-help">←/→ or Space · F fullscreen · O overview · N notes</div>
+
+
+<section class="slide" id="opening" data-title="Opening">
+  <div class="hero-media" aria-hidden="true">
+    <video muted loop autoplay playsinline preload="metadata" src="https://shape-of-motion.github.io/static/videos/swing.mp4"></video>
+    <video muted loop autoplay playsinline preload="metadata" src="https://shape-of-motion.github.io/static/videos/horsejump-high.mp4"></video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="inner title-content">
+    <div class="eyebrow">ICCV 2025 Highlight</div>
+    <h1>Shape of<br><span class="accent">Motion</span></h1>
+    <p class="lead">4D Reconstruction from a Single Video</p>
+    <p class="authors">Qianqian Wang · Vickie Ye · Hang Gao · Weijia Zeng · Jake Austin · Zhengqi Li · Angjoo Kanazawa</p>
+    <span class="venue">Explicit, persistent 3D motion from casual monocular video</span>
+  </div>
+  <div class="notes">开场强调这篇论文同时解决两个通常分开的任务：动态 novel-view synthesis 和 long-range 3D tracking。它不是仅仅重建每个时刻的外观，而是要恢复每个三维场景元素贯穿整个视频的运动轨迹。</div>
+</section>
+
+<section class="slide" id="overview" data-title="One-minute overview">
+  <div class="inner">
+    <div class="eyebrow">01 · One-minute overview</div>
+    <h2>What does this paper<br>actually recover?</h2>
+    <div class="grid-2">
+      <div>
+        <div class="body-copy">
+          <p>The input is a casually captured monocular video of a dynamic scene. The method assumes camera intrinsics and poses are available or estimated, then optimizes one globally consistent 4D scene representation.</p>
+          <p>The output is a persistent set of 3D Gaussians. Their appearance and shape parameters remain attached to the same scene elements, while their positions and orientations change over time.</p>
+          <p>This single representation supports both real-time novel-view rendering and long-range 3D tracking of arbitrary visible surface points.</p>
+        </div>
+        <div class="section-summary">Core idea: model motion explicitly, constrain it to be low-dimensional, and fit it by jointly consolidating RGB, depth, camera, mask, and long-range track evidence.</div>
+      </div>
+      <div class="definition-grid">
+        <div class="definition"><b>Input</b><span>RGB video, camera parameters, moving-object masks, monocular depth, and long-range 2D tracks.</span></div>
+        <div class="definition"><b>Scene model</b><span>Persistent canonical 3D Gaussians plus time-varying motion.</span></div>
+        <div class="definition"><b>Primary output</b><span>Full-sequence 3D trajectories in the world coordinate system.</span></div>
+        <div class="definition"><b>Secondary output</b><span>Dynamic novel-view synthesis at observed timestamps.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">这一页给听众一个完整 mental model。输入并不只是 RGB，系统还使用估计的相机、动态 mask、单目深度和 TAPIR tracks。输出是同一组 persistent Gaussians 在整个时间轴上的姿态。</div>
+</section>
+
+<section class="slide" id="problem" data-title="Problem">
+  <div class="inner">
+    <div class="eyebrow">02 · Problem formulation</div>
+    <h2>Why is monocular<br>4D reconstruction ill-posed?</h2>
+    <div class="grid-2">
+      <div>
+        <p class="body-copy">At every timestamp, a moving scene element is observed from only one camera position and in only one pose. The system therefore cannot obtain conventional multi-view constraints for that object state.</p>
+        <ul class="bullet-list">
+          <li><b>Depth ambiguity:</b> many 3D configurations can produce the same image.</li>
+          <li><b>Motion ambiguity:</b> image displacement may come from camera movement, object movement, or both.</li>
+          <li><b>Occlusion:</b> points can disappear for long periods but should retain a persistent 3D identity.</li>
+          <li><b>Non-rigid motion:</b> independently optimizing every point creates severe jitter and overfitting.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="problem-flow" style="margin-top:0;flex-direction:column">
+          <div class="node" style="width:100%">Observed 2D motion</div>
+          <div class="arrow" style="transform:rotate(90deg)">→</div>
+          <div class="node" style="width:100%">Camera motion + object motion + uncertain depth</div>
+          <div class="arrow" style="transform:rotate(90deg)">→</div>
+          <div class="node" style="width:100%">Many plausible but incompatible 4D explanations</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-summary">The paper's strategy is not to remove the ambiguity completely, but to restrict the solution space using a compact motion model and complementary learned priors.</div>
+  </div>
+  <div class="notes">解释为何传统 structure-from-motion 不够：动态对象在每个姿态只有一个视角。也解释为何逐点 deformation 太自由，容易产生 jitter、popping 和不稳定几何。</div>
+</section>
+
+<section class="slide" id="gap" data-title="Positioning">
+  <div class="inner">
+    <div class="eyebrow">03 · Positioning</div>
+    <h2>What is missing from<br>previous monocular methods?</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-number">DYNAMIC VIEW SYNTHESIS</div>
+        <h3>Good rendering, implicit motion</h3>
+        <div class="compare-list">
+          <div class="compare-item"><b>Deformation fields</b><span>Map between canonical and observation space, but do not naturally expose persistent world-space trajectories.</span></div>
+          <div class="compare-item"><b>Time-dependent radiance fields</b><span>Can reproduce appearance but often make point identity difficult to query over long time ranges.</span></div>
+          <div class="compare-item"><b>Short-range scene flow</b><span>Chaining consecutive flow compounds errors and is fragile through occlusion.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-number">TRACKING METHODS</div>
+        <h3>Good correspondence, incomplete 3D scene</h3>
+        <div class="compare-list">
+          <div class="compare-item"><b>2D point trackers</b><span>Maintain image-space trajectories but do not recover the underlying 3D geometry.</span></div>
+          <div class="compare-item"><b>2D tracks + depth</b><span>Lifting each frame independently produces noisy, inconsistent world-space trajectories.</span></div>
+          <div class="compare-item"><b>Frame-space 3D tracking</b><span>May still entangle object motion with camera motion.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="statement" style="margin-top:28px">Shape of Motion is designed so the same explicit representation can be evaluated as a renderer and as a long-range 3D tracker.</div>
+  </div>
+  <div class="notes">相关工作不需要逐篇讲。用两条主线概括：一类方法擅长 rendering 但运动是 implicit；另一类擅长 tracking 但缺少完整、可渲染的三维场景。</div>
+</section>
+
+<section class="slide" id="representation" data-title="Persistent Gaussians">
+  <div class="inner">
+    <div class="eyebrow">04 · Scene representation</div>
+    <h2>One canonical Gaussian set<br>persists through time.</h2>
+    <div class="grid-2">
+      <div>
+        <div class="equation-card">
+          gᵢ⁰ = ( μᵢ⁰, Rᵢ⁰, sᵢ, oᵢ, cᵢ )<br><br>
+          μᵢᵗ = R₀→ₜ μᵢ⁰ + t₀→ₜ<br>
+          Rᵢᵗ = R₀→ₜ Rᵢ⁰
+        </div>
+        <div class="term-list">
+          <div class="term"><b>μᵢ⁰, Rᵢ⁰</b><span>Canonical position and orientation.</span></div>
+          <div class="term"><b>sᵢ, oᵢ, cᵢ</b><span>Scale, opacity, and color; treated as persistent properties.</span></div>
+          <div class="term"><b>T₀→ₜ</b><span>Time-dependent rigid transformation applied to a Gaussian.</span></div>
+        </div>
+      </div>
+      <div class="body-copy">
+        <p>Unlike reconstructing an independent point cloud at every frame, the method keeps one set of scene elements. This gives every Gaussian a persistent identity.</p>
+        <p>Because the representation is explicit and differentiably rasterized, it can render RGB, depth, masks, and projected trajectories. These outputs can all be compared against input priors during optimization.</p>
+        <p>Static and dynamic Gaussians are modeled separately but rendered and optimized together, allowing the method to preserve a stable background while explaining moving foreground regions.</p>
+        <div class="section-summary">Persistent identity is the bridge between novel-view synthesis and long-range tracking.</div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">这里讲清楚 3DGS 在论文中承担的角色：不只是渲染 primitive，而是有身份的场景元素。static 和 dynamic Gaussians 联合 rasterize，但只有动态部分使用 motion bases。</div>
+</section>
+
+<section class="slide" id="motion-bases" data-title="SE(3) motion bases">
+  <div class="inner">
+    <div class="eyebrow">05 · Motion representation</div>
+    <h2>Shared SE(3) bases impose<br>a low-dimensional motion prior.</h2>
+    <div class="grid-2">
+      <div>
+        <div class="formula">T<sub>i</sub>(t) = Σ<sub>b=1…B</sub> w<sub>i</sub><sup>(b)</sup> T<sup>(b)</sup>(t)</div>
+        <div class="body-copy" style="margin-top:18px">
+          <p>The scene contains far more Gaussians than motion bases: <b>B ≪ N</b>. Instead of learning an independent trajectory for every Gaussian, the model learns a small set of global rigid-motion trajectories.</p>
+          <p>Each Gaussian receives a coefficient vector that blends these bases. Gaussians that move similarly are encouraged to have similar coefficients, producing a soft decomposition into approximately rigid motion groups.</p>
+          <p>In implementation, rotation is represented with a 6D rotation parameterization and combined separately from translation using the same weights.</p>
+        </div>
+        <div class="control-panel">
+          <div class="range-row"><span>Basis A</span><input id="basisA" type="range" min="0" max="100" value="75"><output id="outA">0.75</output></div>
+          <div class="range-row"><span>Basis B</span><input id="basisB" type="range" min="0" max="100" value="35"><output id="outB">0.35</output></div>
+          <div class="range-row"><span>Basis C</span><input id="basisC" type="range" min="0" max="100" value="15"><output id="outC">0.15</output></div>
+        </div>
+      </div>
+      <div>
+        <div class="trajectory-stage"><canvas id="basisCanvas"></canvas></div>
+        <div class="trajectory-legend">
+          <span class="dot-key"><i style="background:#536b78"></i>Group A</span>
+          <span class="dot-key"><i style="background:#8a5f43"></i>Group B</span>
+          <span class="dot-key"><i style="background:#476557"></i>Group C</span>
+        </div>
+        <div class="critical-box" style="margin-top:16px"><b>Why not per-Gaussian motion?</b><span class="muted">It has too many degrees of freedom. The ablation shows more popping and jitter, while shared bases improve overall tracking accuracy and visual stability.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">强调 B 设置为 10，而 Gaussian 数量是数万级。这个巨大压缩比是方法的主要结构先验。PCA 可视化表明 motion coefficients 与刚性运动组有明显关联。</div>
+</section>
+
+<section class="slide" id="trajectory" data-title="Trajectory queries">
+  <div class="inner">
+    <div class="eyebrow">06 · Querying motion</div>
+    <h2>How does the model produce<br>long-range tracks?</h2>
+    <div class="grid-2">
+      <div>
+        <div class="body-copy">
+          <p>For a query pixel in frame <em>t</em>, the renderer identifies the Gaussians contributing to that pixel. Instead of rasterizing their current colors, it rasterizes their 3D positions at another target time <em>t′</em>.</p>
+          <p>The alpha-composited result is the expected world-space position of the corresponding surface point at time <em>t′</em>. Projecting this point into the target camera gives a 2D correspondence; its camera-space z-coordinate gives the target depth.</p>
+          <p>This formulation allows a point visible at one time to be queried at any other time—even when it becomes occluded—because its motion is stored in the persistent 4D representation.</p>
+        </div>
+      </div>
+      <div>
+        <div class="equation-card">
+          X̂<sub>t→t′</sub><sup>w</sup>(p)
+          = Σᵢ Tᵢ αᵢ μᵢ,t′<br><br>
+          Û<sub>t→t′</sub>(p)
+          = Π(K<sub>t′</sub> E<sub>t′</sub> X̂<sub>t→t′</sub><sup>w</sup>(p))<br><br>
+          D̂<sub>t→t′</sub>(p)
+          = [E<sub>t′</sub> X̂<sub>t→t′</sub><sup>w</sup>(p)]<sub>z</sub>
+        </div>
+        <div class="definition-grid" style="margin-top:16px">
+          <div class="definition"><b>3D query</b><span>Where is this surface point in world coordinates at time t′?</span></div>
+          <div class="definition"><b>2D query</b><span>Where should the same point appear in the target image?</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="section-summary">Traditional optical flow predicts local image displacement. This representation answers a stronger question: where does the corresponding physical point move in 3D over the full sequence?</div>
+  </div>
+  <div class="notes">这是论文容易被忽略但很关键的部分。它通过 rasterization 得到任意 query time 到 target time 的 3D world coordinate map，因此 tracking 是 representation 的直接查询，而不是额外的 tracking network。</div>
+</section>
+
+<section class="slide" id="priors" data-title="Inputs and priors">
+  <div class="inner">
+    <div class="eyebrow">07 · Preprocessing</div>
+    <h2>What information is used<br>before optimization begins?</h2>
+    <div class="grid-2">
+      <div class="prior-orbit">
+        <svg viewBox="0 0 700 440" preserveAspectRatio="none">
+          <g stroke="#9ba5a8" stroke-width="2" stroke-dasharray="6 8" fill="none">
+            <path d="M160,90 C250,150 270,175 350,220"/>
+            <path d="M540,90 C450,150 430,175 350,220"/>
+            <path d="M160,350 C250,290 270,265 350,220"/>
+            <path d="M540,350 C450,290 430,265 350,220"/>
+          </g>
+        </svg>
+        <div class="prior-center">Jointly optimized<br>4D scene</div>
+        <div class="prior-node">MegaSaM<small>initial camera poses</small></div>
+        <div class="prior-node">Track-Anything<small>moving-object masks</small></div>
+        <div class="prior-node">Depth Anything<small>relative monocular depth</small></div>
+        <div class="prior-node">TAPIR<small>long-range 2D tracks</small></div>
+      </div>
+      <div>
+        <div class="body-copy">
+          <p>The relative depth maps are aligned to metric depth using a per-frame scale and shift. The authors report that relative depth retains finer local details than directly using metric-depth estimates.</p>
+          <p>Foreground 2D tracks are unprojected with the aligned depth maps to obtain noisy initial 3D trajectories. Their TAPIR visibility and uncertainty scores are retained for weighted initialization.</p>
+          <p>Moving-object masks require a few user clicks in the reported system. Static background points are initialized by directly unprojecting the aligned depth maps.</p>
+          <p>For in-the-wild sequences, MegaSaM camera poses are further refined as learnable parameters during optimization.</p>
+        </div>
+        <div class="critical-box"><b>Important assumption</b><span class="muted">The method is not RGB-only internally. Its contribution is the consolidation of several noisy estimates, rather than replacing those estimators.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">一定要说明输入依赖。论文使用 MegaSaM、Track-Anything、Depth Anything 和 TAPIR。这个方法的价值在于将这些 noisy priors 变成全局一致表示，但性能仍然受它们影响。</div>
+</section>
+
+<section class="slide" id="initialization" data-title="Initialization">
+  <div class="inner">
+    <div class="eyebrow">08 · Initialization</div>
+    <h2>A structured start matters<br>for a highly non-convex problem.</h2>
+    <div class="grid-2">
+      <div class="timeline">
+        <div class="timeline-row"><span class="stage">STEP 1</span><span class="desc"><b>Choose the canonical frame</b> as the frame in which the largest number of 3D tracks is visible.</span></div>
+        <div class="timeline-row"><span class="stage">STEP 2</span><span class="desc"><b>Initialize dynamic Gaussians</b> by sampling locations from the lifted noisy 3D tracks in that frame.</span></div>
+        <div class="timeline-row"><span class="stage">STEP 3</span><span class="desc"><b>Cluster vectorized track velocities</b> with k-means to obtain candidate motion groups.</span></div>
+        <div class="timeline-row"><span class="stage">STEP 4</span><span class="desc"><b>Fit each SE(3) basis</b> with weighted Procrustes alignment across the sequence, using track uncertainty and visibility as weights.</span></div>
+        <div class="timeline-row"><span class="stage">STEP 5</span><span class="desc"><b>Initialize per-Gaussian coefficients</b> with exponential decay from each cluster center, then jointly fit tracks under temporal smoothness.</span></div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-number">WHY THIS STAGE EXISTS</div>
+          <h3>The final objective has many plausible local minima.</h3>
+          <p class="body-copy">A random motion initialization can explain individual frames without finding a coherent full-length trajectory. The explicit SE(3) fitting stage gives each basis a physically meaningful starting motion before photometric optimization begins.</p>
+        </div>
+        <div class="section-summary">Ablation: removing the SE(3) initialization increases 3D tracking EPE from <b>0.082</b> to <b>0.111</b>.</div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">这页是新版里增加的重要细节。初始化不是普通随机初始化：先对 noisy 3D tracks 的速度聚类，再对每个 cluster 做 weighted Procrustes，最后初始化 basis coefficients。</div>
+</section>
+
+<section class="slide" id="optimization" data-title="Optimization">
+  <div class="inner">
+    <div class="eyebrow">09 · Optimization objectives</div>
+    <h2>Four constraints tie appearance,<br>geometry, and motion together.</h2>
+    <div class="grid-2">
+      <div>
+        <div class="equation-card">
+          L = L<sub>recon</sub> + L<sub>track-2D</sub><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;+ L<sub>track-depth</sub> + L<sub>rigidity</sub>
+        </div>
+        <div class="loss-grid">
+          <div class="loss-card"><code>L_recon</code><p>Matches rendered RGB, depth, and foreground masks independently at each frame.</p></div>
+          <div class="loss-card"><code>L_track-2D</code><p>Matches rendered long-range correspondences to TAPIR trajectories across randomly sampled frame pairs.</p></div>
+          <div class="loss-card"><code>L_track-depth</code><p>Requires the tracked point's predicted target depth to agree with the rendered target depth.</p></div>
+          <div class="loss-card"><code>L_rigidity</code><p>Preserves distances between dynamic Gaussians and their k-nearest neighbors across time.</p></div>
+        </div>
+      </div>
+      <div class="body-copy">
+        <p><b>Per-frame reconstruction losses</b> ensure the representation renders each observed frame, but they do not by themselves establish persistent point identity.</p>
+        <p><b>Cross-time track losses</b> bind a Gaussian's motion to long-range correspondences, preventing each timestamp from being explained independently.</p>
+        <p><b>Track-depth consistency</b> connects image-space tracking to three-dimensional geometry rather than treating them as separate signals.</p>
+        <p><b>Local rigidity</b> is a physical motion prior: nearby scene elements should not arbitrarily change their pairwise distances over short neighborhoods.</p>
+        <div class="section-summary">The representation is the meeting point where all noisy observations must agree.</div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">重点解释 loss 的互补性。RGB/depth/mask 是单帧约束，2D track 和 track-depth 是跨时间约束，rigidity 则限制局部三维结构。</div>
+</section>
+
+<section class="slide" id="implementation" data-title="Implementation">
+  <div class="inner">
+    <div class="eyebrow">10 · Implementation and evaluation</div>
+    <h2>What does the reported<br>system cost?</h2>
+    <div class="number-strip">
+      <div class="number-card"><strong>10</strong><span>shared SE(3) motion bases in all experiments</span></div>
+      <div class="number-card"><strong>40k</strong><span>initial dynamic Gaussians</span></div>
+      <div class="number-card"><strong>100k</strong><span>initial static Gaussians</span></div>
+      <div class="number-card"><strong>≈2 h</strong><span>optimization for 300 frames at 960×720 on one A100</span></div>
+    </div>
+    <div class="grid-2" style="margin-top:26px">
+      <div class="card">
+        <div class="card-number">TRAINING</div>
+        <ul class="bullet-list">
+          <li>1,000 iterations for motion initialization.</li>
+          <li>500 epochs for joint scene optimization.</li>
+          <li>Adam optimizer and adaptive Gaussian control.</li>
+          <li>Camera poses are refined during in-the-wild optimization.</li>
+          <li>Reported rendering speed is approximately 140 FPS.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-number">BENCHMARKS AND TASKS</div>
+        <ul class="bullet-list">
+          <li><b>iPhone dataset:</b> real casual videos, 200–500 frames, tracking and validation views.</li>
+          <li><b>Kubric MOVi-F:</b> synthetic multi-object motion with dense 3D ground truth.</li>
+          <li><b>NVIDIA dataset:</b> additional novel-view comparison.</li>
+          <li>Tasks: long-range 3D tracking, long-range 2D tracking, and novel-view synthesis.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="notes">不要把这篇工作描述成实时重建。它的 rendering 是实时的，但 reconstruction 是 per-scene optimization，300 帧需要约两小时。这个 distinction 很重要。</div>
+</section>
+
+<section class="slide" id="results" data-title="Qualitative results">
+  <div class="inner">
+    <div class="eyebrow">11 · Qualitative results</div>
+    <h2>Inspect input, motion,<br>and rendering together.</h2>
+    <p class="body-copy">Each example is best read as a three-part diagnostic: the input defines what was observed, the trajectory view shows whether point identity remains coherent through time, and the novel view tests whether geometry and appearance are globally consistent.</p>
+    <div class="tabs">
+      <button class="tab active" data-result="bear">Bear</button>
+      <button class="tab" data-result="dance">Dance jump</button>
+      <button class="tab" data-result="rhino">Rhino</button>
+    </div>
+    <div class="grid-3 result-set active" id="result-bear">
+      <div class="media-shell"><video muted loop autoplay playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/bear_input.mp4"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Input video</div></div>
+      <div class="media-shell"><video muted loop autoplay playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/bear-tracks.mp4"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">3D tracks</div></div>
+      <div class="media-shell"><video muted loop autoplay playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/bear.mov"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Novel view</div></div>
+    </div>
+    <div class="grid-3 result-set" id="result-dance">
+      <div class="media-shell"><video muted loop playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/dance-jump_input.mp4"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Input video</div></div>
+      <div class="media-shell"><video muted loop playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/dance-jump-tracks.mp4"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">3D tracks</div></div>
+      <div class="media-shell"><video muted loop playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/dance-jump.mov"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Novel view</div></div>
+    </div>
+    <div class="grid-3 result-set" id="result-rhino">
+      <div class="media-shell"><video muted loop playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/rhino_input.mp4"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Input video</div></div>
+      <div class="media-shell"><video muted loop playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/rhino-tracks.mp4"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">3D tracks</div></div>
+      <div class="media-shell"><video muted loop playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/rhino.mov"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Novel view</div></div>
+    </div>
+    <div class="source-line">Official qualitative media is streamed from the authors' project page.</div>
+  </div>
+  <div class="notes">展示时不要只说视觉效果好。让听众分别观察：轨迹是否平滑、遮挡后是否保持一致、novel view 是否出现结构退化，以及背景与动态前景是否对齐。</div>
+</section>
+
+<section class="slide" id="quantitative" data-title="Quantitative results">
+  <div class="inner">
+    <div class="eyebrow">12 · Quantitative results</div>
+    <h2>The same representation<br>leads across three tasks.</h2>
+    <div class="grid-2">
+      <div>
+        <table class="metric-table">
+          <thead>
+            <tr><th>Method</th><th>EPE ↓</th><th>δ3D@10 ↑</th><th>AJ ↑</th><th>OA ↑</th><th>PSNR ↑</th><th>LPIPS ↓</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HyperNeRF</td><td>0.182</td><td>45.8</td><td>10.1</td><td>52.0</td><td>15.99</td><td>0.51</td></tr>
+            <tr><td>Deformable 3DGS</td><td>0.151</td><td>55.3</td><td>14.0</td><td>63.9</td><td>11.92</td><td>0.66</td></tr>
+            <tr><td>TAPIR + Depth Anything</td><td>0.114</td><td>63.2</td><td>27.8</td><td>67.4</td><td>—</td><td>—</td></tr>
+            <tr><td>SpatialTracker (world)</td><td>0.125</td><td>63.9</td><td>24.9</td><td>73.5</td><td>—</td><td>—</td></tr>
+            <tr class="highlight-row"><td>Shape of Motion</td><td>0.082</td><td>73.3</td><td>34.4</td><td>86.6</td><td>16.72</td><td>0.45</td></tr>
+          </tbody>
+        </table>
+        <p class="metric-note">Selected results from the iPhone dataset. δ3D@10 is the percentage of predictions within 10 cm; AJ and OA are TAP-Vid 2D tracking metrics.</p>
+      </div>
+      <div class="body-copy">
+        <p><b>Against tracking-only baselines:</b> the method improves over simply lifting TAPIR trajectories with Depth Anything. This shows that global 4D consolidation corrects noisy per-frame geometry and correspondence.</p>
+        <p><b>Against rendering-focused baselines:</b> dynamic NeRF and deformation-based Gaussian methods can render, but their implicit motion is less accurate for long-range trajectory queries.</p>
+        <p><b>Why the joint task matters:</b> tracking baselines do not synthesize novel views, while the best rendering baselines are weaker trackers. Shape of Motion is designed to perform both with one representation.</p>
+        <div class="section-summary">On Kubric MOVi-F, the method also reduces 3D tracking EPE to 0.16, compared with 0.19–0.20 for CoTracker/TAPIR plus depth.</div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">表格只保留有代表性的 baseline。重点不是逐个数字读，而是说明方法同时覆盖 tracking 和 rendering；其他 baseline 通常只能在其中一类任务上输出结果。</div>
+</section>
+
+<section class="slide" id="ablation" data-title="Ablation">
+  <div class="inner">
+    <div class="eyebrow">13 · Ablation</div>
+    <h2>Which design choices<br>actually matter?</h2>
+    <div class="grid-2">
+      <div>
+        <table class="metric-table">
+          <thead><tr><th>Variant</th><th>EPE ↓</th><th>δ3D@5 ↑</th><th>δ3D@10 ↑</th></tr></thead>
+          <tbody>
+            <tr class="highlight-row"><td>Full model</td><td>0.082</td><td>43.0</td><td>73.3</td></tr>
+            <tr><td>Translation bases</td><td>0.093</td><td>42.3</td><td>69.9</td></tr>
+            <tr><td>Per-Gaussian SE(3)</td><td>0.083</td><td>43.6</td><td>70.2</td></tr>
+            <tr><td>Per-Gaussian translation</td><td>0.087</td><td>41.2</td><td>69.2</td></tr>
+            <tr><td>No SE(3) initialization</td><td>0.111</td><td>39.3</td><td>65.7</td></tr>
+            <tr><td>No 2D tracks</td><td>0.141</td><td>30.4</td><td>57.8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="compare-list">
+          <div class="compare-item"><b>SE(3) vs translation</b><span>Rotation-aware bases improve tracking over translation-only bases.</span></div>
+          <div class="compare-item"><b>Shared bases vs per-point</b><span>Similar numeric EPE can hide visual instability; per-Gaussian SE(3) produces more popping and jitter.</span></div>
+          <div class="compare-item"><b>Initialization</b><span>The Procrustes-based SE(3) initialization is necessary to avoid poor local minima.</span></div>
+          <div class="compare-item"><b>2D tracks</b><span>Removing track supervision causes the largest degradation, confirming that photometric and depth losses alone cannot recover reliable long-range motion.</span></div>
+        </div>
+        <div class="section-summary">The strongest lesson is not simply “use Gaussians”; it is “combine a constrained motion representation with persistent cross-time supervision.”</div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">Ablation 中 No 2D Tracks 降幅最大。Shared motion basis 的意义既体现在 tracking 指标，也体现在减少 popping/jitter。不要只看 per-Gaussian SE3 的 EPE 接近 full model。</div>
+</section>
+
+<section class="slide" id="limitations" data-title="Limitations">
+  <div class="inner">
+    <div class="eyebrow">14 · Limitations and discussion</div>
+    <h2>What remains unresolved?</h2>
+    <div class="grid-2">
+      <div>
+        <div class="media-shell" style="height:28vh"><video muted loop autoplay playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/judo.mov"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Fast motion and occlusion</div></div>
+        <div class="media-shell" style="height:28vh;margin-top:14px"><video muted loop autoplay playsinline controls preload="metadata" src="https://shape-of-motion.github.io/static/videos/hike.mov"></video><div class="media-fallback">Official video requires internet.</div><div class="media-label">Incorrect monocular depth</div></div>
+      </div>
+      <div>
+        <ul class="bullet-list" style="margin-top:0">
+          <li><b>Per-scene optimization:</b> reconstruction is not feed-forward or streamable; a 300-frame example requires about two hours on an A100.</li>
+          <li><b>Dependency on external priors:</b> camera, depth, masks, and tracks can fail in textureless regions, under large motion, or during long occlusion.</li>
+          <li><b>Manual interaction:</b> the reported pipeline needs a few user clicks to obtain moving-object masks.</li>
+          <li><b>Topology and disocclusion:</b> persistent Gaussians cannot reliably reconstruct geometry that is never observed, and difficult topology changes remain challenging.</li>
+          <li><b>Linear basis blending:</b> a small set of rigid bases is a strong regularizer, but may underfit highly complex local deformation.</li>
+        </ul>
+        <div class="critical-box" style="margin-top:20px"><b>Balanced interpretation</b><span class="muted">The system is powerful because it constrains noisy evidence globally. The same reliance on upstream priors and per-scene fitting is also its main practical limitation.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="notes">限制页要区分论文明确提出的限制和合理分析。明确限制包括 per-scene optimization、依赖 upstream estimates、需要用户 mask。复杂 topology 和线性 basis underfitting 可作为讨论性分析。</div>
+</section>
+
+<section class="slide" id="takeaways" data-title="Takeaways">
+  <div class="inner">
+    <div class="eyebrow">15 · Final takeaways</div>
+    <h2>Why is this paper important?</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway"><b>It unifies tracking and rendering.</b><p class="muted">The same scene representation supports accurate 3D trajectory queries and dynamic novel-view synthesis.</p></div>
+      <div class="takeaway"><b>It makes motion explicit.</b><p class="muted">Persistent world-space trajectories are easier to query, visualize, and evaluate than an implicit deformation field.</p></div>
+      <div class="takeaway"><b>It regularizes before it optimizes.</b><p class="muted">Shared SE(3) bases dramatically reduce the freedom of monocular dynamic reconstruction.</p></div>
+    </div>
+    <div class="statement" style="margin-top:48px">Shape of Motion turns a monocular video into a model of not only what the 3D scene looks like, but how its physical elements move through space and time.</div>
+    <div class="meta" style="margin-top:30px">
+      <span class="pill">Persistent 3D Gaussians</span>
+      <span class="pill">10 shared SE(3) bases</span>
+      <span class="pill">Depth + TAPIR supervision</span>
+      <span class="pill">Long-range 3D tracking</span>
+      <span class="pill">Novel-view synthesis</span>
+    </div>
+    <div class="source-line">Paper: Wang et al., “Shape of Motion: 4D Reconstruction from a Single Video,” ICCV 2025. Media: official author project page.</div>
+  </div>
+  <div class="notes">结尾回到三个最重要的贡献：统一 tracking/rendering、显式 persistent motion、低维 SE3 basis regularization。不要把结论停留在“效果好”，而是强调 representation design。</div>
+</section>
+
+
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.slide')];
+  const nav = document.getElementById('deckNav');
+  const progress = document.getElementById('progress');
+  let current = 0;
+
+  slides.forEach((s,i)=>{
+    const b=document.createElement('button');
+    b.title=s.dataset.title || `Section ${i+1}`;
+    b.addEventListener('click',()=>go(i));
+    nav.appendChild(b);
+    s.addEventListener('click',()=>{
+      if(document.body.classList.contains('overview')){
+        document.body.classList.remove('overview');
+        setTimeout(()=>go(i),50);
+      }
+    });
+  });
+  const dots=[...nav.children];
+
+  function setCurrent(i){
+    current=Math.max(0,Math.min(slides.length-1,i));
+    dots.forEach((d,j)=>d.classList.toggle('active',j===current));
+    slides.forEach((s,j)=>s.classList.toggle('is-current',j===current));
+    progress.style.width=`${(current/(slides.length-1))*100}%`;
+    document.title=`${String(current+1).padStart(2,'0')} · ${slides[current].dataset.title} — Shape of Motion`;
+  }
+  function go(i){
+    current=Math.max(0,Math.min(slides.length-1,i));
+    slides[current].scrollIntoView({behavior:'smooth',block:'start'});
+    setCurrent(current);
+  }
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting && e.intersectionRatio>.55){
+        const i=slides.indexOf(e.target); setCurrent(i);
+        e.target.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+      } else if(!e.isIntersecting){
+        e.target.querySelectorAll('video').forEach(v=>v.pause());
+      }
+    })
+  },{threshold:[.1,.55,.9]});
+  slides.forEach(s=>obs.observe(s));
+
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();go(current+1)}
+    if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(current-1)}
+    if(e.key.toLowerCase()==='f'){
+      if(!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+      else document.exitFullscreen?.();
+    }
+    if(e.key.toLowerCase()==='o'){
+      document.body.classList.toggle('overview');
+      if(!document.body.classList.contains('overview')) setTimeout(()=>go(current),50);
+      else window.scrollTo({top:0,behavior:'smooth'});
+    }
+    if(e.key.toLowerCase()==='n') document.body.classList.toggle('show-notes');
+    if(e.key==='Escape' && document.body.classList.contains('overview')) document.body.classList.remove('overview');
+  });
+  setCurrent(0);
+
+  // Graceful media failure.
+  document.querySelectorAll('video').forEach(v=>{
+    v.addEventListener('error',()=>v.classList.add('failed'));
+  });
+
+  // Results tabs.
+  document.querySelectorAll('.tab').forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.result-set').forEach(s=>s.classList.remove('active'));
+      tab.classList.add('active');
+      const set=document.getElementById('result-'+tab.dataset.result);
+      set.classList.add('active');
+      set.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}));
+    });
+  });
+
+  // Interactive motion-basis illustration.
+  const canvas=document.getElementById('basisCanvas');
+  const ctx=canvas.getContext('2d');
+  const sliders=['A','B','C'].map(k=>document.getElementById('basis'+k));
+  const outputs=['A','B','C'].map(k=>document.getElementById('out'+k));
+  let t=0, raf;
+
+  function resize(){
+    const r=canvas.getBoundingClientRect();
+    const dpr=Math.min(devicePixelRatio||1,2);
+    canvas.width=Math.floor(r.width*dpr);canvas.height=Math.floor(r.height*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  function draw(){
+    const W=canvas.clientWidth,H=canvas.clientHeight;
+    ctx.clearRect(0,0,W,H);
+    ctx.strokeStyle='#d5d8d4';ctx.lineWidth=1;
+    for(let x=40;x<W;x+=50){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}
+    for(let y=40;y<H;y+=50){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}
+    const a=+sliders[0].value/100,b=+sliders[1].value/100,c=+sliders[2].value/100;
+    outputs[0].value=a.toFixed(2);outputs[1].value=b.toFixed(2);outputs[2].value=c.toFixed(2);
+    const groups=[
+      {color:'#536b78',cx:.32,cy:.36,n:22,phase:0,wa:a,wb:b*.18,wc:c*.08},
+      {color:'#8a5f43',cx:.66,cy:.42,n:18,phase:2.2,wa:a*.15,wb:b,wc:c*.12},
+      {color:'#476557',cx:.51,cy:.70,n:20,phase:4.3,wa:a*.10,wb:b*.18,wc:c}
+    ];
+    groups.forEach((g,gi)=>{
+      for(let i=0;i<g.n;i++){
+        const angle=i/g.n*Math.PI*2;
+        const baseX=W*g.cx+Math.cos(angle)*48+(i%4)*3;
+        const baseY=H*g.cy+Math.sin(angle)*30+(i%5)*2;
+        const dx=g.wa*Math.sin(t+g.phase)*62 + g.wb*Math.cos(t*.75+g.phase)*35;
+        const dy=g.wb*Math.sin(t*.85+g.phase)*50 + g.wc*Math.cos(t*.6+g.phase)*45;
+        const rot=g.wc*Math.sin(t*.7+g.phase)*.75;
+        const ox=baseX-W*g.cx, oy=baseY-H*g.cy;
+        const x=W*g.cx+ox*Math.cos(rot)-oy*Math.sin(rot)+dx;
+        const y=H*g.cy+ox*Math.sin(rot)+oy*Math.cos(rot)+dy;
+        ctx.globalAlpha=.85;ctx.fillStyle=g.color;
+        ctx.beginPath();ctx.arc(x,y,4.3,0,Math.PI*2);ctx.fill();
+      }
+    });
+    ctx.globalAlpha=1;t+=.012;raf=requestAnimationFrame(draw);
+  }
+  sliders.forEach(s=>s.addEventListener('input',()=>{}));
+  resize();draw();addEventListener('resize',resize);
+})();
+</script>
+</body>
+</html>
